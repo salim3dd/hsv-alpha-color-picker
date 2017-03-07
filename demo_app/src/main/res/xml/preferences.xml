@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:key="simplePreference"
+        android:title="@string/pref_title"
+        android:defaultValue="#f00"
+        />
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:key="optionalColor"
+        android:title="@string/pref_optional_color"
+        app:colorpicker_noneSelectedSummaryText="@string/no_color_selected"
+        android:summary="@string/pref_optional_color_summary"
+        app:colorpicker_selectNoneButtonText="@string/no_color"
+        />
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:key="optionalColorWithDefault"
+        android:title="@string/pref_default_color"
+        android:summary="@string/pref_default_color_summary"
+        android:defaultValue="#f0f"
+        app:colorpicker_selectNoneButtonText="@string/default_color"
+        />
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:key="opaquePreference"
+        android:title="@string/pref_no_alpha"
+        android:summary="@string/pref_no_alpha_summary"
+        app:colorpicker_showAlpha="false"
+        android:defaultValue="#00f"
+        />
+
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:key="opaquePreferenceNoHex"
+        android:title="@string/pref_title_minimal"
+        android:summary="@string/pref_title_minimal_summary"
+        app:colorpicker_showAlpha="false"
+        app:colorpicker_showHex="false"
+        android:defaultValue="#0f0"
+        />
+
+    <PreferenceScreen
+        android:title="@string/pref_show_view_usage_demo">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.rarepebble.colorpickerdemo.ViewDemoActivity"
+            android:targetPackage="com.rarepebble.colorpickerdemo" />
+    </PreferenceScreen>
+
+</PreferenceScreen>
